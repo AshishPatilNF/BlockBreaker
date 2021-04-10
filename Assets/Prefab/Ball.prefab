@@ -135,13 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4374c3c151cf509439a2f8e43ae27dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddle1: {fileID: 751976685392990834, guid: 3ab9441d7bcd7854ea339f4e697fb552, type: 3}
-  clips:
-  - {fileID: 8300000, guid: 9a26fa0b928bc6e4bbfe732d9763222d, type: 3}
-  - {fileID: 8300000, guid: 28afed614d997a0458bbb5292749f5a5, type: 3}
-  - {fileID: 8300000, guid: d2356df0485f04641920e6a291a457ca, type: 3}
-  - {fileID: 8300000, guid: 86efc1ca3370caf4eab777cd19285a04, type: 3}
-  - {fileID: 8300000, guid: 8a78a4cd3cea10444978604da59f844d, type: 3}
+  paddle1: {fileID: 0}
 --- !u!82 &-5831251400306062467
 AudioSource:
   m_ObjectHideFlags: 0
