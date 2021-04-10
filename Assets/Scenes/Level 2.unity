@@ -6071,18 +6071,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2736799806893750886, guid: d4a2182bf14a24045938e230b08eb1a8, type: 3}
-      propertyPath: m_Color.b
-      value: 0.15194014
-      objectReference: {fileID: 0}
-    - target: {fileID: 2736799806893750886, guid: d4a2182bf14a24045938e230b08eb1a8, type: 3}
-      propertyPath: m_Color.g
-      value: 0.7353077
-      objectReference: {fileID: 0}
-    - target: {fileID: 2736799806893750886, guid: d4a2182bf14a24045938e230b08eb1a8, type: 3}
-      propertyPath: m_Color.r
-      value: 0.8301887
-      objectReference: {fileID: 0}
     - target: {fileID: 2736799807244493426, guid: d4a2182bf14a24045938e230b08eb1a8, type: 3}
       propertyPath: m_Name
       value: GameBoundary

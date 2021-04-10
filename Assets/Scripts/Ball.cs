@@ -8,19 +8,22 @@ public class Ball : MonoBehaviour
     [SerializeField]
     Paddle paddle1;
 
-    float initPosY;
-
-    float xLaunch = 2f;
+    float xLaunch = 1f;
 
     float yLaunch = 15f;
 
     bool hasStarted = false;
+
+    Rigidbody2D rigidBody;
+
+    AudioSource audioSourceBall;
  
     // Start is called before the first frame update
     void Start()
     {
-        initPosY = transform.position.y - paddle1.transform.position.y;
-        GetComponent<Rigidbody2D>().simulated = false;
+        rigidBody = GetComponent<Rigidbody2D>();
+        audioSourceBall = GetComponent<AudioSource>();
+        rigidBody.simulated = false;
     }
 
     // Update is called once per frame
@@ -38,13 +41,21 @@ public class Ball : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             hasStarted = true;
-            GetComponent<Rigidbody2D>().velocity = new Vector2(xLaunch, yLaunch);
-            GetComponent<Rigidbody2D>().simulated = true;
+            rigidBody.velocity = new Vector2(xLaunch, yLaunch);
+            rigidBody.simulated = true;
         }
     }
 
     private void BallToPaddle()
     {
         transform.position = new Vector2(paddle1.transform.position.x, paddle1.transform.position.y + 0.47f);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (hasStarted)
+        {
+            audioSourceBall.Play();
+        }
     }
 }
