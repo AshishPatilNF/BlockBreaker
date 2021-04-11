@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
@@ -16,15 +15,6 @@ public class Level : MonoBehaviour
         sceneLoading = FindObjectOfType<SceneLoader>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Bblocks == 0)
-        {
-            sceneLoading.LoadNextScene();
-        }
-    }
-
     public void AddBlocks()
     {
         Bblocks++;
@@ -33,5 +23,10 @@ public class Level : MonoBehaviour
     public void RemoveBlock()
     {
         Bblocks--;
+
+        if (Bblocks == 0)
+        {
+            sceneLoading.LoadNextScene();
+        }
     }
 }
