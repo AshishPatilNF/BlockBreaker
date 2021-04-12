@@ -18,10 +18,25 @@ public class GameStatus : MonoBehaviour
     [SerializeField]
     private int score = 0;
 
+    private void Awake()
+    {
+        int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
+
+        if(gameStatusCount > 1)
+        {
+            gameObject.SetActive(false);
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        text.text = score.ToString();
     }
 
     // Update is called once per frame
