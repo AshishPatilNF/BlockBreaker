@@ -44,3 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameTime: 1
+  text: {fileID: 0}
+  points: 2
+  score: 0
