@@ -24,7 +24,7 @@ public class GameStatus : MonoBehaviour
 
         if(gameStatusCount > 1)
         {
-            gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
             Destroy(this.gameObject);
         }
         else
@@ -49,5 +49,10 @@ public class GameStatus : MonoBehaviour
     {
         score += points;
         text.text = score.ToString();
+    }
+
+    public void ResetGame()
+    {
+        Destroy(this.gameObject);
     }
 }
