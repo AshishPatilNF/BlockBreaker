@@ -7,6 +7,9 @@ public class Block : MonoBehaviour
     [SerializeField]
     AudioClip blockSound;
 
+    [SerializeField]
+    GameObject particleVFX;
+
     private Level level;
 
     private GameStatus gameStatus;
@@ -20,14 +23,16 @@ public class Block : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        PlayAudioAndDestroy();
+        PreAndPostDestroy();
     }
 
-    private void PlayAudioAndDestroy()
+    private void PreAndPostDestroy()
     {
         AudioSource.PlayClipAtPoint(blockSound, Camera.main.transform.position);
         gameStatus.AddScore();
         level.RemoveBlock();
+        GameObject particlevfx = Instantiate(particleVFX, transform.position, Quaternion.identity);
+        Destroy(particlevfx, 2f);
         Destroy(this.gameObject);
     }
 }

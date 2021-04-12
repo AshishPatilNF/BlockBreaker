@@ -14,7 +14,11 @@ public class SceneLoader : MonoBehaviour
     public void LoadStartScene()
     {
         SceneManager.LoadScene(0);
-        FindObjectOfType<GameStatus>().ResetGame();
+
+        if(FindObjectOfType<GameStatus>())
+        {
+            FindObjectOfType<GameStatus>().ResetGame();
+        }
     }
 
     private void Update()
