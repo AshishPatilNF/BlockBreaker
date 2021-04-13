@@ -56,6 +56,7 @@ public class Ball : MonoBehaviour
         if (hasStarted)
         {
             audioSourceBall.Play();
+            rigidBody.velocity += new Vector2(UnityEngine.Random.Range(0f,0.5f), UnityEngine.Random.Range(0f, 0.5f));
         }
     }
 }
