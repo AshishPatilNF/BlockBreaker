@@ -18,7 +18,7 @@ public class GameStatus : MonoBehaviour
     [SerializeField]
     private int score = 0;
 
-    private bool autoPlayOn = true;
+    private bool autoPlayOn = false;
 
     private void Awake()
     {
@@ -45,6 +45,18 @@ public class GameStatus : MonoBehaviour
     void Update()
     {
         Time.timeScale = GameTime;
+
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            if(autoPlayOn)
+            {
+                autoPlayOn = false;
+            }
+            else
+            {
+                autoPlayOn = true;
+            }
+        }
     }
 
     public void AddScore()

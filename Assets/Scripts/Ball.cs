@@ -41,13 +41,7 @@ public class Ball : MonoBehaviour
 
     private void LaunchBall()
     {
-        if(Input.GetMouseButtonDown(0) && !gameStatus.IsAutoPlayOn())
-        {
-            hasStarted = true;
-            rigidBody.velocity = new Vector2(xLaunch, yLaunch);
-            rigidBody.simulated = true;
-        }
-        else
+        if(Input.GetMouseButtonDown(0) || gameStatus.IsAutoPlayOn())
         {
             hasStarted = true;
             rigidBody.velocity = new Vector2(xLaunch, yLaunch);
