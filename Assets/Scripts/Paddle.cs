@@ -13,8 +13,6 @@ public class Paddle : MonoBehaviour
     [SerializeField]
     float minClamp = 1f;
 
-    float Xposition;
-
     private GameStatus gameStatus;
 
     private Ball ball;
@@ -36,11 +34,11 @@ public class Paddle : MonoBehaviour
     {
         if (gameStatus.IsAutoPlayOn())
         {
-            return Xposition = ball.transform.position.x;
+            return ball.transform.position.x;
         }
         else
         {
-            return Xposition = Input.mousePosition.x / Screen.width * screenWidthUnits;
+            return Input.mousePosition.x / Screen.width * screenWidthUnits;
         }
     }
 }
