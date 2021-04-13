@@ -48,7 +48,7 @@ public class GameStatus : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.A))
         {
-            if(autoPlayOn)
+            if (autoPlayOn)
             {
                 autoPlayOn = false;
             }
@@ -73,5 +73,10 @@ public class GameStatus : MonoBehaviour
     public bool IsAutoPlayOn()
     {
         return autoPlayOn;
+    }
+
+    public void TurnOffAutoPlay()
+    {
+        autoPlayOn = false;
     }
 }
