@@ -18,6 +18,8 @@ public class GameStatus : MonoBehaviour
     [SerializeField]
     private int score = 0;
 
+    private bool autoPlayOn = true;
+
     private void Awake()
     {
         int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
@@ -54,5 +56,10 @@ public class GameStatus : MonoBehaviour
     public void ResetGame()
     {
         Destroy(this.gameObject);
+    }
+
+    public bool IsAutoPlayOn()
+    {
+        return autoPlayOn;
     }
 }

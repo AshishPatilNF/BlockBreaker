@@ -8,7 +8,7 @@ public class Ball : MonoBehaviour
     [SerializeField]
     Paddle paddle1;
 
-    float xLaunch = 1f;
+    float xLaunch = 2f;
 
     float yLaunch = 15f;
 
@@ -17,10 +17,13 @@ public class Ball : MonoBehaviour
     Rigidbody2D rigidBody;
 
     AudioSource audioSourceBall;
+
+    private GameStatus gameStatus;
  
     // Start is called before the first frame update
     void Start()
     {
+        gameStatus = FindObjectOfType<GameStatus>();
         rigidBody = GetComponent<Rigidbody2D>();
         audioSourceBall = GetComponent<AudioSource>();
         rigidBody.simulated = false;
@@ -38,7 +41,13 @@ public class Ball : MonoBehaviour
 
     private void LaunchBall()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && !gameStatus.IsAutoPlayOn())
+        {
+            hasStarted = true;
+            rigidBody.velocity = new Vector2(xLaunch, yLaunch);
+            rigidBody.simulated = true;
+        }
+        else
         {
             hasStarted = true;
             rigidBody.velocity = new Vector2(xLaunch, yLaunch);
