@@ -1817,6 +1817,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5232033968759714906, guid: 736a36b925b9a4e4e8d0fa6b9d9114b8, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232033968759714906, guid: 736a36b925b9a4e4e8d0fa6b9d9114b8, type: 3}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5232033969342027690, guid: 736a36b925b9a4e4e8d0fa6b9d9114b8, type: 3}
       propertyPath: m_RootOrder
       value: 4
