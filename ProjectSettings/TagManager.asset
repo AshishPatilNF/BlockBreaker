@@ -6,6 +6,7 @@ TagManager:
   tags:
   - UnBreakable
   - Breakable
+  - Paddle
   layers:
   - Default
   - TransparentFX

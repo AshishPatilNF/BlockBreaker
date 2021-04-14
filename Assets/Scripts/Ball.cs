@@ -8,9 +8,9 @@ public class Ball : MonoBehaviour
     [SerializeField]
     Paddle paddle1;
 
-    float xLaunch = 2f;
+    float xLaunch = 1f;
 
-    float yLaunch = 15f;
+    float yLaunch = 12f;
 
     bool hasStarted = false;
 
@@ -59,7 +59,7 @@ public class Ball : MonoBehaviour
         if (hasStarted)
         {
             audioSourceBall.Play();
-            rigidBody.velocity += new Vector2(UnityEngine.Random.Range(0f,0.5f), UnityEngine.Random.Range(0f, 0.5f));
+            rigidBody.velocity += new Vector2(UnityEngine.Random.Range(0f, 0.5f), UnityEngine.Random.Range(0f, 0.5f));
         }
     }
 }
