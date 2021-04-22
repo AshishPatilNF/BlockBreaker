@@ -13,6 +13,6 @@ Block Breaker is a Breakout game with 5 levels to complete.
 
 4. The user can "Quit" the game at any given time by pressing the "Q Key" or the "Quit Button".
 
-This project was developed for the better understanding of Unity Engine's Transform, Time.timescale, Instantiation, Physics Engine, Physics Material, World Units, Colliders, Collisions, Triggers and AudioSource and Basics of C#.
+This project was developed for the better understanding of Unity Engine's Transform, Time.timescale, Instantiation, Physics Engine, Physics Material, World Units, Colliders, Collisions, Triggers and AudioSource and Basics of C#, floating point numbers.
 
 This project was developed as a part of the Udemy course "Complete C# Unity Game Developer 2D" under the guidance of Rick Davidson and Ben Tristem.
